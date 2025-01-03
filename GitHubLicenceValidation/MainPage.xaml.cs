@@ -7,7 +7,7 @@ namespace GitHubLicenceValidation
 {
     public partial class MainPage : ContentPage
     {
-        private const string OpenAiApiKey = "your-api-key-here";
+        private const string OpenAiApiKey = "your-api-key-from-open-api";
         private const string OpenAiApiUrl = "https://api.openai.com/v1/completions";
 
         public MainPage()
@@ -43,8 +43,12 @@ If specific restrictions exist, explain them. Return a clear and concise respons
 
             var requestBody = new
             {
-                model = "text-davinci-003", // Or another model like `gpt-3.5-turbo`
-                prompt = prompt,
+                model = "gpt-3.5-turbo",
+                messages = new[]
+                {
+            new { role = "system", content = "You are an assistant." },
+            new { role = "user", content = prompt }
+        },
                 max_tokens = 300
             };
 
@@ -52,12 +56,12 @@ If specific restrictions exist, explain them. Return a clear and concise respons
 
             try
             {
-                var response = await client.PostAsync(OpenAiApiUrl, content);
+                var response = await client.PostAsync("https://api.openai.com/v1/chat/completions", content);
                 response.EnsureSuccessStatusCode();
 
                 var responseBody = await response.Content.ReadAsStringAsync();
                 var json = JsonDocument.Parse(responseBody);
-                var text = json.RootElement.GetProperty("choices")[0].GetProperty("text").GetString();
+                var text = json.RootElement.GetProperty("choices")[0].GetProperty("message").GetProperty("content").GetString();
 
                 return text?.Trim();
             }

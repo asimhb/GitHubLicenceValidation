@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\asimb\source\repos\GitHubLicenceValidation\GitHubLicenceValidation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-27T03:09:38.872</Modified>
+      <Modified>2025-01-03T02:40:34.169</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\asimb\source\repos\GitHubLicenceValidation\GitHubLicenceValidation\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\GitHubLicenceValidation.dll">
       <PackagePath>GitHubLicenceValidation.dll</PackagePath>
-      <Modified>2024-12-27T03:09:38.195</Modified>
+      <Modified>2025-01-03T02:40:33.941</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\asimb\source\repos\GitHubLicenceValidation\GitHubLicenceValidation\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>GitHubLicenceValidation.exe</PackagePath>
-      <Modified>2024-12-27T03:09:38.229</Modified>
+      <Modified>2025-01-03T02:40:33.945</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\asimb\source\repos\GitHubLicenceValidation\GitHubLicenceValidation\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
